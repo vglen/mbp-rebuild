@@ -1,0 +1,65 @@
+---
+# tasks file for brew.install
+
+  - name: Update Homebrew
+    homebrew:
+      update_homebrew=yes
+
+  - name: Tap some kegs
+    homebrew_tap:
+      tap="{{ item }}"
+      state=present
+    with_items:
+      - ethereum/ethereum
+      - homebrew/completions
+      - homebrew/binary
+
+  - name: Install some brews
+    homebrew:
+      name={{ item }} 
+      state=present
+    with_items:
+      - autossh
+      - bash-git-prompt
+      - coreutils
+      - curl
+      - dnstracer
+      - fpp
+      - gdbm
+      - git
+      - git-lfs
+      - gnupg
+      - gnu-tar
+      - go
+      - htop-osx
+      - libevent
+      - libtool
+      - libyaml
+      - makedepend
+      - mtr
+      - ncdu
+      - nmap
+      - npm
+      - openssl
+      - packer
+      - packer-completion
+      - pcre
+      - pkg-config
+      - postgresql
+      - pow
+      - python
+      - python3
+      - rbenv
+      - readline
+      - ruby
+      - s3cmd
+      - spark
+      - ssh-copy-id
+      - sshuttle
+      - sysdig
+      - todo-txt
+      - xz
+      - wget
+      - wireshark
+
+

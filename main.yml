@@ -1,0 +1,14 @@
+---
+
+- hosts: "localhost"
+  gather_facts: no
+  connection: local
+  remote_user: "{{ user }}"
+  vars_files:
+  - "vars/main.yml"
+
+  tasks:
+  roles:
+      - brew
+      - cask
+      - awscli
