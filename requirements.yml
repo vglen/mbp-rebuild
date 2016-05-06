@@ -1,1 +1,15 @@
 ---
+- src: git+ssh://git@github.com/vglen/ansible-awscli.git
+  version: v1.0.0
+  path: roles
+  scm: git
+
+- src: git+ssh://git@github.com/vglen/ansible-brew.git
+  version: v1.0.0
+  path: roles
+  scm: git
+
+- src: git+ssh://git@github.com/vglen/ansible-cask.git
+  version: v1.0.0
+  path: roles
+  scm: git
