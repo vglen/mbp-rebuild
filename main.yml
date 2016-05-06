@@ -9,6 +9,6 @@
 
   tasks:
   roles:
-      - brew
-      - cask
-      - awscli
+      - ansible-brew
+      - ansible-cask
+      - ansible-awscli
